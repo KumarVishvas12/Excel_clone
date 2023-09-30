@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    height: 5vh;
+    background-color: #107c41;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-bar{
+    background-color: #107c41;
+    height: 5vh;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+.menu-bar-item{
+   display: flex;
+   height: 5vh;
+   align-items: center;
+    color: white;
+    padding: 0 10px;
+}
+
+.menu-bar-item:hover{
+    cursor: pointer;
+    background-color:#025a2a;
+
+}
+.selected{
+    color: #107c41;
+    background-color: white;
+}
+.menu-bar-item.selected:hover{
+    background-color: white;
+    cursor: default;
+}
+.menu-icon-bar{
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    border: 1px solid black;
+}
+.formula-bar{
+    height: 6vh;
+    border: 1px solid black;
+}
+.data-container{
+    height: 74vh;
+    border: 1px solid black;
+    
+}
+.select-all-cell{
+    width: 3vw;
+    height: 5vh;
+    border: 2px solid rgb(6, 51, 254);
+    display: inline;
+}
+.col-name-container{
+    width: 95vw;
+    height: 5vh;
+    border: 1px solid black;
+    float: right;
+    display: block;
+    
+}
+.row-name-container{
+    width: 3vw;
+    height: 69vh;
+    border: 1px solid rgb(192, 36, 36);
+    display: inline;
+}
+.input-cell-container{
+    width: 95vw;
+    height: 69vh;
+    border: 1px solid blue;
+    float: right;
+}
+.sheet-bar{
+    height: 4vh;
+    border: 1px solid black;
+}

@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MS Excel</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <h1 class="heading">This is MS Excel project</h1>
-   
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ms Excel</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <p>Book1 Excel</p>
+      </div>
+      <div class="menu-bar">
+        <div class="menu-file menu-bar-item">File</div>
+        <div class="menu-home selected menu-bar-item">Home</div>
+        <div class="menu-insert menu-bar-item">Insert</div>
+        <div class="menu-page-layout menu-bar-item">Page Layout</div>
+        <div class="menu-formula menu-bar-item">Formulas</div>
+        <div class="menu-data menu-bar-item">Data</div>
+        <div class="menu-review menu-bar-item">Review</div>
+        <div class="menu-view menu-bar-item">View</div>
+        <div class="menu-help menu-bar-item">Help</div>
+        <div class="menu-power menu-bar-item">Power Pivot</div>
+      </div>
 
-    
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, aliquam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, aliquam?</p>
-    <script >
-        document.getElementsByClassName(".heading").style.color="red";
+      <div class="menu-icon-bar">
+        <span class="material-symbols-outlined"> content_copy </span>
+        <span class="material-symbols-outlined"> content_cut </span>
+        <span class="material-symbols-outlined"> content_paste </span>
+        <span class="material-symbols-outlined"> format_bold </span>
+        <span class="material-symbols-outlined"> format_italic </span>
+        <span class="material-symbols-outlined">
+            format_underlined
+            </span>
+      </div>
+      <div class="formula-bar"></div>
+      <div class="data-container">
+        <div class="select-all-cell"></div>
+        <div class="col-name-container"></div>
+        <div class="row-name-container"></div>
+        <div class="input-cell-container"></div>
+      </div>
+      <div class="sheet-bar"></div>
+    </div>
 
-    </script>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
