@@ -32,9 +32,50 @@
         <span class="material-symbols-outlined"> content_copy </span>
         <span class="material-symbols-outlined"> content_cut </span>
         <span class="material-symbols-outlined"> content_paste </span>
+        <select
+          name=""
+          id="font-family"
+          class="font-family-selector"
+          style="font-family: "
+        >
+          <option value="Noto Sans" style="font-family: Noto Sans">
+            Noto Sans
+          </option>
+          <option value="Arial" style="font-family: Arial">Arial</option>
+          <option value="calibri" style="font-family: calibri">calibri</option>
+          <option value="Impact" style="font-family: Impact">Impact</option>
+          <option value="Georgia" style="font-family: Georgia">Georgia</option>
+          <option value="Lato" style="font-family: Lato">Lato</option>
+          <option value="Palatino" style="font-family: Palatino">
+            Palatino
+          </option>
+          <option value="Verdana" style="font-family: Verdana">Verdana</option>
+          <option value="Garamond" style="font-family: Garamond">
+            Garamond
+          </option>
+          <option value="Geneva" style="font-family: Geneva">Geneva</option>
+          <option value="Serif" style="font-family: Serif">Serif</option>
+          <option value="Comic Sans MS" style="font-family: Comic Sans MS">
+            Comic Sans MS
+          </option>
+        </select>
+        <select name="" id="font-size">
+          <option value="10">10</option>
+          <option value="10">12</option>
+          <option value="10">14</option>
+          <option value="10">16</option>
+          <option value="10">18</option>
+          <option value="10">20</option>
+        </select>
+
         <span class="material-symbols-outlined"> format_bold </span>
         <span class="material-symbols-outlined"> format_italic </span>
         <span class="material-symbols-outlined"> format_underlined </span>
+        <span class="material-symbols-outlined"> format_align_left </span>
+        <span class="material-symbols-outlined"> format_align_center </span>
+        <span class="material-symbols-outlined"> format_align_right </span>
+        <span class="material-symbols-outlined"> format_color_fill </span>
+        <span class="material-symbols-outlined"> format_color_text </span>
       </div>
       <div class="formula-bar"></div>
       <div class="data-container">
@@ -43,7 +84,18 @@
         <div class="row-name-container"></div>
         <div class="input-cell-container"></div>
       </div>
-      <div class="sheet-bar"></div>
+
+      <div class="sheet-bar">
+        <div class="scroller">
+          <span class="material-symbols-outlined"> arrow_left </span>
+          <span class="material-symbols-outlined"> arrow_right </span>
+        </div>
+        <span class="material-symbols-outlined add_circle"> add_circle </span>
+        <div class="sheet-tab-container">
+          <div class="sheet-tab">Sheet1</div>
+          <div class="sheet-tab">Sheet2</div>
+        </div>
+      </div>
     </div>
 
     <script src="./index.js"></script>
