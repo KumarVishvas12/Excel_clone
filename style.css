@@ -84,6 +84,7 @@ body{
     border: 1px solid black;
 }
 .data-container{
+    overflow: visible;
     height: 75vh;
     display: flex;
     flex-wrap: wrap;
@@ -96,12 +97,15 @@ body{
     
 }
 .col-name-container{
+    /* overflow: scroll; */
     width: calc(100vw - 30px);
     height: 30px;
-    border: 1px solid black;    
+    border: 1px solid black;   
+    display: flex; 
     
 }
 .row-name-container{
+    /* overflow: hidden; */
     width: 30px;
     height: calc(75vh - 30px);
     border: 1px solid rgb(192, 36, 36);
@@ -157,4 +161,34 @@ body{
 }
 .sheet-tab:hover{
     cursor: pointer;
+}
+
+.col-name{
+   min-width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+}
+.row-name{
+    min-height: 30px;
+    width: 100%;
+    border-bottom:1px solid lightgray ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell-row{
+    display: flex;
+}
+.input-cell{
+   min-width: 100px;
+   display: flex;
+   justify-content: end;
+   align-items: end;
+    height: 30px;
+    font-weight: bold;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
