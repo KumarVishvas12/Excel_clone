@@ -36,7 +36,7 @@
           name=""
           id="font-family"
           class="font-family-selector"
-          style="font-family: "
+          
         >
           <option value="Noto Sans" style="font-family: Noto Sans">
             Noto Sans
@@ -68,25 +68,27 @@
           <option value="10">20</option>
         </select>
 
-        <span class="material-symbols-outlined"> format_bold </span>
-        <span class="material-symbols-outlined"> format_italic </span>
-        <span class="material-symbols-outlined"> format_underlined </span>
-        <span class="material-symbols-outlined"> format_align_left </span>
-        <span class="material-symbols-outlined"> format_align_center </span>
-        <span class="material-symbols-outlined"> format_align_right </span>
+        <span class="material-symbols-outlined format-text"> format_bold </span>
+        <span class="material-symbols-outlined format-text"> format_italic </span>
+        <span class="material-symbols-outlined format-text"> format_underlined </span>
+        <span class="material-symbols-outlined selected-icon align-icon"> format_align_left </span>
+        <span class="material-symbols-outlined align-icon"> format_align_center </span>
+        <span class="material-symbols-outlined align-icon"> format_align_right </span>
         <span class="material-symbols-outlined"> format_color_fill </span>
         <span class="material-symbols-outlined"> format_color_text </span>
       </div>
-      <div class="formula-bar"></div>
+      <div class="formula-bar-container">
+        <div class="formula-bar-selected-cell" contenteditable="true"></div>
+        <div class="function-sign">
+          <span class="material-symbols-outlined"> function </span>
+        </div>
+        <div class="formula-bar" contenteditable="true"></div>
+      </div>
       <div class="data-container">
         <div class="select-all-cell"></div>
-        <div class="col-name-container">
-          
-        </div>
-        <div class="row-name-container">
-          
-        </div>
-        <div class="input-cell-container ">
+        <div class="col-name-container"></div>
+        <div class="row-name-container"></div>
+        <div class="input-cell-container">
           <!-- <div class="cell-row">
              <div class="input-cell" contenteditable="true"></div>
             <div class="input-cell" contenteditable="true"></div> 

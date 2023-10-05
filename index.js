@@ -89,18 +89,32 @@ document.querySelectorAll('.col-name').forEach((i)=>{i.contentEditable="false"})
 
 
 
+// ************************************************************************************
+
+document.querySelectorAll(".align-icon").forEach((e)=>{e.addEventListener('click',()=>{
+    document.querySelector('.selected-icon').classList.remove('selected-icon')
+    e.classList.add('selected-icon')
+})})
 
 
+document.querySelectorAll(".format-text").forEach((e)=>{e.addEventListener('click',()=>{
+    e.classList.toggle('selected-icon')
+    
+})})
+
+document.getElementById('A1').classList.add('selected');
+
+document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener('click',()=>{
+    document.querySelector('.input-cell.selected').classList.remove('selected')
+    e.classList.add('selected')
+    
+    
+    
+})})
 
 
-
-
-
-
-
-
-
-
+// .classList.remove('selected');
+//    
 
 
 
