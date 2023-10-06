@@ -77,7 +77,7 @@ diva.id = ans + j;
 diva.className="input-cell";
 // diva.innerHTML=ans +j;
 
-diva.contentEditable="true";
+// diva.contentEditable="true";
 cell_row.appendChild(diva)
 document.getElementById(ans).contentEditable="true";
 }
@@ -106,15 +106,17 @@ document.getElementById('A1').classList.add('selected');
 
 document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener('click',()=>{
     document.querySelector('.input-cell.selected').classList.remove('selected')
+    e.classList.add('selected')   
+})})
+
+//Applying double click property in eacg cell to make it editable
+document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener("dblclick",()=>{
+    document.querySelector('.input-cell.selected').classList.remove('selected')
     e.classList.add('selected')
-    
-    
-    
+    e.setAttribute("contentEditable", "true")  
 })})
 
 
-// .classList.remove('selected');
-//    
 
 
 
@@ -127,8 +129,3 @@ document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener('click
 
 
 
-// var rd = document.querySelector(".red");
-// var rdp = document.createElement("p");
-// var rdpt = document.createTextNode("my bottom aligned div 1");
-// rdp.appendChild(rdpt);
-// rd.appendChild(rdp);
