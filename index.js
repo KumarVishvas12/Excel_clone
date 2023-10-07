@@ -1,11 +1,10 @@
 var row_name = document.querySelector('.row-name-container');
 var col_name = document.querySelector('.col-name-container');
-// var cell_row=document.querySelector('.cell-row');
 var cell_row_container=document.querySelector('.input-cell-container');
 
+let row_number=52;
 
-
-for (let i = 1; i <= 52; i++) {
+for (let i = 1; i <= row_number; i++) {
 
     let ans = "";
 
@@ -38,8 +37,6 @@ for (let i = 1; i <= 52; i++) {
     make_div.innerHTML = ans;
     make_div.contentEditable="false";
     col_name.appendChild(make_div)
-
-
 }
 
 
@@ -47,7 +44,7 @@ for (let i = 1; i <= 52; i++) {
 //For putting input cells in input-cell-container, first
 //  row of cells is made by usinh inner loop then each row is append in input-cell-container by using outer loop
 
-for(let j=1;j<=52;j++){
+for(let j=1;j<=row_number;j++){
 
     cell_row=document.createElement('div');
     cell_row.className="cell-row";
@@ -116,9 +113,12 @@ document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener("dblcl
     e.setAttribute("contentEditable", "true")  
 })})
 
-
-
-
+//Applying scrolling property on input cell container and col name container and row name container
+let scroller=document.querySelector('.input-cell-container');
+scroller.addEventListener("scroll",(e)=>{
+    document.querySelector(".col-name-container").scrollLeft=scroller.scrollLeft
+    document.querySelector(".row-name-container").scrollTop=scroller.scrollTop
+})
 
 
 

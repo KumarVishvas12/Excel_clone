@@ -98,7 +98,7 @@ body{
     
 }
 .col-name-container{
-    /* overflow: scroll; */
+    overflow: hidden;
     width: calc(100vw - 30px);
     height: 30px;
     border: 1px solid black;   
@@ -106,13 +106,14 @@ body{
     
 }
 .row-name-container{
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 30px;
     height: calc(75vh - 30px);
     border: 1px solid rgb(192, 36, 36);
    
 }
 .input-cell-container{
+    overflow: scroll;
     width: calc(100vw - 30px);
     height: calc(75vh - 30px);
     border: 1px solid blue;
@@ -193,6 +194,7 @@ body{
     font-weight: bold;
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+    overflow: hidden;
 }
 
 
