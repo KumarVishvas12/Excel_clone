@@ -44,39 +44,33 @@ for (let i = 1; i <= row_number; i++) {
 //For putting input cells in input-cell-container, first
 //  row of cells is made by usinh inner loop then each row is append in input-cell-container by using outer loop
 
-for(let j=1;j<=row_number;j++){
+for(let i=1;i<=row_number;i++){
 
     cell_row=document.createElement('div');
     cell_row.className="cell-row";
 
 
 
-for (let i = 1; i <= 52; i++) {
-
-    let ans = "";
-
-    let n = i;
+for (let j = 1; j<= 52; j++) {
 
 diva = document.createElement("div")
 
 
-while (n > 0) {
-    let rem = n % 26;
-    if (rem == 0) {
-        ans = "Z" + ans;
-        n = Math.floor(n / 26) - 1;
-    } else {
-        ans = String.fromCharCode(rem - 1 + 65) + ans;
-        n = Math.floor(n / 26);
-    }
-}
-diva.id = ans + j;
+// while (n > 0) {
+//     let rem = n % 26;
+//     if (rem == 0) {
+//         ans = "Z" + ans;
+//         n = Math.floor(n / 26) - 1;
+//     } else {
+//         ans = String.fromCharCode(rem - 1 + 65) + ans;
+//         n = Math.floor(n / 26);
+//     }
+// }
+diva.id = "rowid-"+i+"-colid-"+j;
 diva.className="input-cell";
-// diva.innerHTML=ans +j;
-
-// diva.contentEditable="true";
+// diva.contentEditable="true"
 cell_row.appendChild(diva)
-document.getElementById(ans).contentEditable="true";
+// document.getElementById(ans).contentEditable="true";
 }
 cell_row_container.appendChild(cell_row);
 }
@@ -99,11 +93,27 @@ document.querySelectorAll(".format-text").forEach((e)=>{e.addEventListener('clic
     
 })})
 
-document.getElementById('A1').classList.add('selected');
+document.getElementById('rowid-1-colid-1').classList.add('selected');
 
-document.querySelectorAll('.input-cell').forEach((e)=>{e.addEventListener('click',()=>{
+document.querySelectorAll('.input-cell').forEach((i)=>{i.addEventListener('click',(e)=>{
+    // console.log(e);
+    if(e.ctrlKey){
+        idarray=i.id.split("-");
+        let [rowId,colId]=[idarray[1],idarray[3]]
+        if(rowId>1){
+        let top_cell_selected=document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.contains("selected");
+        if(top_cell_selected){
+            i.classList.add("top-cell-selected");
+            i.classList.add("selected")
+            document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.add('bottom-cell-selected')
+        }
+        }
+        
+        
+    }
+    else{
     document.querySelector('.input-cell.selected').classList.remove('selected')
-    e.classList.add('selected')   
+    i.classList.add('selected')   }
 })})
 
 //Applying double click property in eacg cell to make it editable

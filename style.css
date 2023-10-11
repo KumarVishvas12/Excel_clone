@@ -246,3 +246,12 @@ body{
     transition: transform .5s ease-in-out; */
     
 }
+.top-cell-selected{
+    border-top: 1px solid lightgray;
+    background-color: red;
+}
+.bottom-cell-selected{
+    border-bottom: 1px solid lightgray;
+    background-color: green;
+}
+
