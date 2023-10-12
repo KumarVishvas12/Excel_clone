@@ -120,7 +120,7 @@ document.querySelectorAll('.input-cell').forEach((i)=>{i.addEventListener('click
             }
             }
 
-
+            console.log("hello")
 
         //     if(colId>1){
         //         let left_cell_selected=document.getElementById(`rowid-${rowId}-colid-${colId-1}`).classList.contains("selected");
