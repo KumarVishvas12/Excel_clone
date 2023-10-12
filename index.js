@@ -102,23 +102,23 @@ document.querySelectorAll('.input-cell').forEach((i)=>{i.addEventListener('click
 
         i.classList.add("selected")
 
-        // if(rowId>1){
-        // let top_cell_selected=document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.contains("selected");
-        // if(top_cell_selected){
-        //     i.classList.add("top-cell-selected");
-        //     i.classList.add("selected")
-        //     document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.add('bottom-cell-selected')
-        // }
-        // }
-        // if(rowId<row_number){
-        //     let bottom_cell_selected=document.getElementById(`rowid-${rowId+1}-colid-${colId}`).classList.contains("selected");
+        if(rowId>1){
+        let top_cell_selected=document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.contains("selected");
+        if(top_cell_selected){
+            i.classList.add("top-cell-selected");
+            i.classList.add("selected")
+            document.getElementById(`rowid-${rowId-1}-colid-${colId}`).classList.add('bottom-cell-selected')
+        }
+        }
+        if(rowId<row_number){
+            let bottom_cell_selected=document.getElementById(`rowid-${rowId+1}-colid-${colId}`).classList.contains("selected");
             
-        //     if(bottom_cell_selected){
-        //         i.classList.add("bottom-cell-selected");
-        //         i.classList.add("selected")
-        //         document.getElementById(`rowid-${Math.floor(rowId)+1}-colid-${colId}`).classList.add('top-cell-selected')
-        //     }
-        //     }
+            if(bottom_cell_selected){
+                i.classList.add("bottom-cell-selected");
+                i.classList.add("selected")
+                document.getElementById(`rowid-${Math.floor(rowId)+1}-colid-${colId}`).classList.add('top-cell-selected')
+            }
+            }
 
 
 
