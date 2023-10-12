@@ -37,11 +37,11 @@ body{
     background-color:#025a2a;
 
 }
-.selected{
+.menu-bar-selected{
     color: #107c41;
     background-color: white;
 }
-.menu-bar-item.selected:hover{
+.menu-bar-item.menu-bar-selected:hover{
     background-color: white;
     cursor: default;
 }
@@ -185,13 +185,13 @@ body{
     display: flex;
 }
 .input-cell{
-    outline-color: #107c41;
+    /* outline-color: #107c41; */
    min-width: 100px;
    display: flex;
    justify-content: end;
    align-items: end;
     height: 30px;
-    font-weight: bold;
+    font-weight: 300;
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     overflow: hidden;
@@ -239,19 +239,45 @@ body{
 
 
 .input-cell.selected{
-    /* background-color: rgb(255, 238, 238); */
+    
     /* outline-color: #107c41; */
     border: 2px solid #107c41;
-    /* transform: scale(2);
-    transition: transform .5s ease-in-out; */
+    background-color: rgb(196, 233, 255);
+
     
 }
-.top-cell-selected{
-    border-top: 1px solid lightgray;
-    background-color: red;
-}
+ /* .top-cell-selected{
+    border-top: lightgray; 
+ }
+  
+
 .bottom-cell-selected{
-    border-bottom: 1px solid lightgray;
-    background-color: green;
+    border-bottom: lightgray;
+   
+}
+.right-cell-selected{
+    border-right: lightgray;
+    
 }
 
+.left-cell-selected{
+    border-left: lightgray;
+    
+}   */
+
+.bold{
+    font-weight: bold;
+    font-size: 19px; 
+    color: red;  
+}
+.italic{
+    font-style: italic;
+}
+.underline{
+    
+    Text-decoration: underline 
+    
+}
+.fill{
+    background-color: rgb(247, 154, 250);
+}
